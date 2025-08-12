@@ -3,7 +3,7 @@
 
 import { db, collection, addDoc, getDocs, query, orderBy, serverTimestamp, onSnapshot } from './firebase.js';
 
-const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLhtihoGpaQidU6NPqAkgOtY8PoYCgl8XodMMlEGBMcVxT4iOaJOsfYKI8mIK6B1-z/exec';
+const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz3P5cidBSMs_hXt3uSLU5Os37AKtS8eSElQSLYp3ALKqTVfOi7Py5yBb0K6oNPfKZL/exec';
 
 // Elements
 const yearEl = document.getElementById('year');
@@ -114,7 +114,7 @@ if (contactForm){
     try{
       await fetch(GOOGLE_SHEETS_ENDPOINT, {
         method:'POST',
-        mode:'no-cors',
+        // mode:'no-cors',
         headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
         body: payload.toString()
       });
