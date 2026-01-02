@@ -102,7 +102,25 @@ body{
 .t-name{font-weight:600; font-size:clamp(14px,1.6vw,16px)}
 .t-role{color:var(--muted); font-size:clamp(11px,1.2vw,13px)}
 .stars{color:var(--primary); letter-spacing:2px; font-size:clamp(12px,1.3vw,14px)}
-.t-card p{color:var(--muted); overflow-wrap:anywhere; word-break:break-word; white-space:normal; font-size:clamp(12px,1.3vw,14px); line-height:1.4}
+/* .t-card p{color:var(--muted); overflow-wrap:anywhere; word-break:break-word; white-space:normal; font-size:clamp(12px,1.3vw,14px); line-height:1.4} */
+.t-card p{
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 4px;
+  font-size: smaller;
+}
+
+/* Optional: nicer scrollbar */
+.t-card p::-webkit-scrollbar{
+  width: 4px;
+}
+.t-card p::-webkit-scrollbar-thumb{
+  background: rgba(212,175,55,0.6);
+  border-radius: 4px;
+}
+
+
+
 .carousel-controls{display:flex; gap:10px; justify-content:center; margin-top:20px}
 .circle-btn{width:clamp(40px,4.5vw,50px); height:clamp(40px,4.5vw,50px); border-radius:50%; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.03); color:var(--text); cursor:pointer; font-size:clamp(14px,1.6vw,18px); transition:all 0.3s ease}
 .circle-btn:hover{border-color:var(--primary); color:var(--primary); transform:scale(1.1)}
